@@ -12,7 +12,7 @@ import courseRouter_v2 from "./routes/coursesRouters_v2.ts";
 import enrollmentRouter_v2 from "./routes/enrollmentsRouters_v2.ts";
 
 const app = express();
-const port = 3500;
+const port = 3000;
 
 // body parser middleware
 app.use(express.json());
@@ -54,9 +54,7 @@ app.use("/api/v2/enrollments", enrollmentRouter_v2);
 // endpoint check middleware
 app.use(notFoundMiddleware);
 
-app.listen(port, () => {
-  console.log(`🚀 Server running on http://localhost:${port}`);
-});
+
 
 // Export app for vercel deployment
 export default app;
