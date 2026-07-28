@@ -52,6 +52,16 @@ app.use(invalidJsonMiddleware);
 
 
 
+
+
+
+// Endpoints
+
+app.get("/", (req: Request, res: Response) => {
+
+  res.send("Lecture09 API services");
+
+});
 app.get("/api/me", (req: Request, res: Response) => {
 
   return res.json({
@@ -75,16 +85,6 @@ app.get("/api/me", (req: Request, res: Response) => {
     }
 
   });
-
-});
-
-
-
-// Endpoints
-
-app.get("/", (req: Request, res: Response) => {
-
-  res.send("Lecture09 API services");
 
 });
 
