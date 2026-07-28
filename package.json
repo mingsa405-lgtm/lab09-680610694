@@ -2,6 +2,8 @@
   "name": "lecture-09",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
+  "packageManager": "pnpm@11.15.0",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
@@ -11,16 +13,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "11.15.0",
-      "onFail": "download"
-    }
+  "engines": {
+    "node": ">=22"
   },
-  "type": "module",
   "dependencies": {
-    "approve-builds": "^1.0.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "debug": "^4.4.3",
