@@ -54,7 +54,9 @@ app.use("/api/v2/enrollments", enrollmentRouter_v2);
 // endpoint check middleware
 app.use(notFoundMiddleware);
 
-
+app.listen(port, () => {
+  console.log(`🚀 Server running on http://localhost:${port}`);
+});
 
 // Export app for vercel deployment
 export default app;
