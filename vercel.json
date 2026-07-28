@@ -1,17 +1,5 @@
 {
   "version": 2,
   "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
-  "builds": [
-    {
-      "src": "src/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/index.ts"
-    }
-  ]
-}
+  "outputDirectory": "dist"}
+  
