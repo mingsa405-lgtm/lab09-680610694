@@ -108,17 +108,15 @@ app.use("/api/v2/enrollments", enrollmentRouter_v2);
 
 app.use(notFoundMiddleware);
 
+if (process.env.NODE_ENV !== "production") {
+  app.listen(port, () => {
+    console.log(`🚀 Server running on http://localhost:${port}`);
+  });
+}
 
 
-app.listen(port, () => {
-
-  console.log(`🚀 Server running on http://localhost:${port}`);
-
-});
 
 
-
-// Export app for vercel deployment
 
 export default app; 
 
