@@ -57,7 +57,7 @@ export let enrollments: Enrollment[] = [
     courseId: "261497",
   },
   {
-    studentId: "680610003",
+    studentId: "680615003",
     courseId: "269101",
   },
   {
@@ -100,28 +100,37 @@ export const DB = {
   users,
 };
 
-// For resetting the database to its original state
+// เก็บข้อมูล Original สำหรับใช้ตอน Reset
 const org_users = structuredClone(users);
 const org_students = structuredClone(students);
 const org_courses = structuredClone(courses);
 const org_enrollments = structuredClone(enrollments);
 
+// 💡 แก้ไขลอจิกการ Reset: ล้างข้อมูลใน Array เดิมออก แล้วค่อย Push เข้าไปใหม่
+// วิธีนี้ Reference จะไม่ขาดจากตัวแปร DB ชัวร์ครับ
 export function reset_db() {
-  users = structuredClone(org_users);
-  students = structuredClone(org_students);
-  courses = structuredClone(org_courses);
-  enrollments = structuredClone(org_enrollments);
+  reset_users();
+  reset_students();
+  reset_courses();
+  reset_enrollments();
 }
 
 export function reset_users() {
-  users = structuredClone(org_users);
+  users.length = 0;
+  users.push(...structuredClone(org_users));
 }
+
 export function reset_students() {
-  students = structuredClone(org_students);
+  students.length = 0;
+  students.push(...structuredClone(org_students));
 }
+
 export function reset_courses() {
-  courses = structuredClone(org_courses);
+  courses.length = 0;
+  courses.push(...structuredClone(org_courses));
 }
+
 export function reset_enrollments() {
-  enrollments = structuredClone(org_enrollments);
+  enrollments.length = 0;
+  enrollments.push(...structuredClone(org_enrollments));
 }
