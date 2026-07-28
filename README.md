@@ -4,7 +4,7 @@
 รหัส นศ.:680610694
 
 ชื่อ-สกุล : ปัณณวัฒน์ วงษ์แก้วจันทร์
-vercel url :
+vercel url :lab09-680610694.vercel.app
 ### Content
 
 - Current API
